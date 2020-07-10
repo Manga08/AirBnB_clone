@@ -288,3 +288,12 @@ class test_base_model(unittest.TestCase):
 
         self.assertEqual(type(new_dict['created_at']), str)
         self.assertEqual(type(new_dict['created_at']), str)
+
+    def test_docstrings(self):
+        """Tests for dosctrings"""
+        self.assertGreater(len(BaseModel.__doc__), 1)
+        self.assertGreater(len(BaseModel.__doc__), 1)
+        self.assertGreater(len(BaseModel.__init__.__doc__), 1)
+        self.assertGreater(len(BaseModel.__str__.__doc__), 1)
+        self.assertGreater(len(BaseModel.save.__doc__), 1)
+        self.assertGreater(len(BaseModel.to_dict.__doc__), 1)
